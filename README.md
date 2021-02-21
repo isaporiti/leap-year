@@ -11,7 +11,11 @@ All the following rules must be satisfied:
 Examples:
 
 1997 is not a leap year (not divisible by 4)
+
 1996 is a leap year (divisible by 4)
+
 1600 is a leap year (divisible by 400)
+
 1800 is not a leap year (divisible by 4, divisible by 100, NOT divisible by 400)
+
 The method should return true if a year is a leap year, and false if it is not.
