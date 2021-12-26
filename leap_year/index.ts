@@ -11,12 +11,12 @@ function checkIfLeapYear(year: Dividend): boolean {
 
 class Dividend {
     constructor(dividend: number) {
-        this.number = dividend;
+        this.dividend = dividend;
     }
 
-    private readonly number: number;
+    private readonly dividend: number;
 
     public isDivisibleBy(divisor: number): boolean {
-        return this.number % divisor === 0;
+        return this.dividend % divisor === 0;
     }
 }
