@@ -1,8 +1,22 @@
 export default function isLeapYear(year: number): boolean {
-    if (isDivisibleBy(year, 100) && !isDivisibleBy(year, 400)) return false 
-    return isDivisibleBy(year, 4);
-}
-function isDivisibleBy(dividend: number, divisor: number): boolean {
-    return dividend % divisor === 0;
+    return checkIfLeapYear(new Dividend(year));
 }
 
+function checkIfLeapYear(year: Dividend): boolean {
+    if (year.isDivisibleBy(100) && !year.isDivisibleBy(400)) {
+        return false;
+    }
+    return year.isDivisibleBy(4);
+}
+
+class Dividend {
+    constructor(dividend: number) {
+        this.number = dividend;
+    }
+
+    private readonly number: number;
+
+    public isDivisibleBy(divisor: number): boolean {
+        return this.number % divisor === 0;
+    }
+}
